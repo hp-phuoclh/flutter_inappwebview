@@ -97,7 +97,7 @@ window.print = function() {
 }
 """
 
-let platformReadyJS = "window.dispatchEvent(new Event('flutterInAppWebViewPlatformReady'));";
+let platformReadyJS = "window.dispatchEvent(new Event('TokyoMetroNavitimeSearchHandler'));";
 
 let findTextHighlightJS = """
 var wkwebview_SearchResultCount = 0;

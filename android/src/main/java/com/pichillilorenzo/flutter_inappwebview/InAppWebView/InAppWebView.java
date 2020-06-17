@@ -134,7 +134,7 @@ final public class InAppWebView extends InputAwareWebView {
           "  window." + JavaScriptBridgeInterface.name + ".callHandler('onPrint', window.location.href);" +
           "};";
 
-  static final String platformReadyJS = "window.dispatchEvent(new Event('flutterInAppWebViewPlatformReady'));";
+  static final String platformReadyJS = "window.dispatchEvent(new Event('TokyoMetroNavitimeSearchHandler'));";
 
   static final String variableForOnLoadResourceJS = "window._flutter_inappwebview_useOnLoadResource";
   static final String enableVariableForOnLoadResourceJS = variableForOnLoadResourceJS + " = $PLACEHOLDER_VALUE;";
