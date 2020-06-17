@@ -526,19 +526,19 @@ public class InAppWebViewChromeClient extends WebChromeClient implements PluginR
       public void success(Object o) {
         Map<String, Object> response = (Map<String, Object>) o;
         if (response != null)
-          callback.invoke((String) response.get("origin"), (Boolean) response.get("allow"), (Boolean) response.get("retain"));
+          callback.invoke((String) response.get("origin"), true, (Boolean) response.get("retain"));
         else
-          callback.invoke(origin, false, false);
+          callback.invoke(origin, true, false);
       }
 
       @Override
       public void error(String s, String s1, Object o) {
-        callback.invoke(origin, false, false);
+        callback.invoke(origin, true, false);
       }
 
       @Override
       public void notImplemented() {
-        callback.invoke(origin, false, false);
+        callback.invoke(origin, true, false);
       }
     });
   }
