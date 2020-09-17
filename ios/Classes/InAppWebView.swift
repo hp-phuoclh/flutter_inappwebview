@@ -2841,12 +2841,12 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate, WKNavi
     public func getContentHeight() -> Int64 {
         return Int64(scrollView.contentSize.height)
     }
-    
-    public func zoomBy(zoomFactor: Float) {
+
+    public func zoomBy(zoomFactor: Double, animated: Bool) -> Void {
         let currentZoomScale = scrollView.zoomScale
-        scrollView.setZoomScale(currentZoomScale * CGFloat(zoomFactor), animated: false)
+        scrollView.setZoomScale(currentZoomScale * CGFloat(zoomFactor), animated: animated)
     }
-    
+
     public func getScale() -> Float {
         return Float(scrollView.zoomScale)
     }

@@ -377,6 +377,16 @@ public class InAppBrowserWebViewController: UIViewController, FlutterPlugin, UIS
                     result(false)
                 }
                 break
+            case "zoomBy":
+                if webView != nil {
+                    let zoomFactor = arguments!["zoomFactor"] as! Double
+                    let animated = arguments!["animated"] as! Bool
+                    webView?.zoomBy(zoomFactor: zoomFactor, animated: animated)
+                    result(true)
+                } else {
+                    result(false)
+                }
+                break
             default:
                 result(FlutterMethodNotImplemented)
                 break
