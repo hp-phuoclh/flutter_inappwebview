@@ -321,7 +321,7 @@ public class InAppBrowserActivity extends AppCompatActivity implements MethodCha
         break;
       case "zoomBy":
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-          Double zoomFactor = (Double) call.argument("zoomFactor");
+          Float zoomFactor = (Float) call.argument("zoomFactor");
           zoomBy(zoomFactor);
         }
         result.success(true);
